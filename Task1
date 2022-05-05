@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+    system("chcp 65001");
+    double a = 0, b = 0;
+    char op;
+    cout << "Первое число: ";
+    cin >> a;
+    cout << "Второе число: ";
+    cin >> b;
+    cout << "Желаемая операция: ";
+    cin >> op;
+
+    switch (op) {
+        case '-':
+            cout << a << " - " << b << " = " << a - b << '\n';
+            break;
+        case '+':
+            cout << a << " + " << b << " = " << a + b << '\n';
+            break;
+        case '*':
+            cout << a << " * " << b << " = " << a * b << '\n';
+            break;
+        case '/':
+            cout << a << " / " << b << " = " << a / b << '\n';
+            break;
+        default:
+            cout << "Некорректная операция";
+    }
+    return 0;
+}
