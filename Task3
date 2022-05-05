@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+    system("chcp 65001");
+    int a = 0;
+    cout << "Сколько яблок?" << '\n';
+    cin >> a;
+    int b = a%100;
+    if(a<0){
+        cout << "Ошибка, столько яблок не бывает";
+        return 0;
+    }
+    if(b==11 || b==12 || b==13 || b==14){
+        cout << a << " яблок";
+    }
+    else{
+        b = a%10;
+        if(b==1){
+            cout << a << " яблоко";
+            return 0;
+        }
+        if(b==2||b==3||b==4){
+            cout << a << " яблока";
+            return 0;
+        }
+        else{
+            cout << a << " яблок";
+        }
+    }
+}
